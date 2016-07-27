@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @measure.date %>
+</p>
+
+<p>
+  <strong>Arm:</strong>
+  <%= @measure.arm %>
+</p>
+
+<p>
+  <strong>Waist:</strong>
+  <%= @measure.waist %>
+</p>
+
+<p>
+  <strong>Hip:</strong>
+  <%= @measure.hip %>
+</p>
+
+<p>
+  <strong>Calf:</strong>
+  <%= @measure.calf %>
+</p>
+
+<p>
+  <strong>Thigh:</strong>
+  <%= @measure.thigh %>
+</p>
+
+<p>
+  <strong>Weigth:</strong>
+  <%= @measure.weigth %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @measure.user %>
+</p>
+
+<%= link_to 'Edit', edit_measure_path(@measure) %> |
+<%= link_to 'Back', measures_path %>

@@ -1,0 +1,49 @@
+<%= form_for(@measure) do |f| %>
+  <% if @measure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@measure.errors.count, "error") %> prohibited this measure from being saved:</h2>
+
+      <ul>
+      <% @measure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :arm %><br>
+    <%= f.text_field :arm %>
+  </div>
+  <div class="field">
+    <%= f.label :waist %><br>
+    <%= f.text_field :waist %>
+  </div>
+  <div class="field">
+    <%= f.label :hip %><br>
+    <%= f.text_field :hip %>
+  </div>
+  <div class="field">
+    <%= f.label :calf %><br>
+    <%= f.text_field :calf %>
+  </div>
+  <div class="field">
+    <%= f.label :thigh %><br>
+    <%= f.text_field :thigh %>
+  </div>
+  <div class="field">
+    <%= f.label :weigth %><br>
+    <%= f.text_field :weigth %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
