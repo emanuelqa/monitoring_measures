@@ -27,7 +27,7 @@
         <td><%= measure.calf %></td>
         <td><%= measure.thigh %></td>
         <td><%= measure.weigth %></td>
-        <td><%= measure.user %></td>
+        <td><%= measure.user.name %></td>
         <td><%= link_to 'Show', measure %></td>
         <td><%= link_to 'Edit', edit_measure_path(measure) %></td>
         <td><%= link_to 'Destroy', measure, method: :delete, data: { confirm: 'Are you sure?' } %></td>

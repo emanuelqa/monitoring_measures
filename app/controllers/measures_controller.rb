@@ -15,6 +15,7 @@ class MeasuresController < ApplicationController
   # GET /measures/new
   def new
     @measure = Measure.new
+    @users = User.all
   end
 
   # GET /measures/1/edit
