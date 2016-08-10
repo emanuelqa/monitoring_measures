@@ -1,10 +1,28 @@
-.mdl-layout__content{
-	width: 100%;
+.navbar-cor{
+	background-color: #1E90FF;
+	
 }
-.title{
-	background-color: #F5F5F5;
-	width: 100%;
+
+.navbar-cor .brand-cor{
+	color: #FFFFFF;
 }
-.tamanho{
-	width: 100%;
+
+.navbar-default .navbar-nav > li > a {
+	color: #FFFFFF;
+}
+
+.container {
+    padding: 25px;
+}
+
+.panel{
+	padding: 0;
+	
+}
+.form-control {
+    border-radius: 10px;
+}
+
+.botao {
+    text-align: center;
 }

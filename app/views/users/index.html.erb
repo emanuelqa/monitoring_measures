@@ -1,47 +1,50 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Last name</th>
-      <th>Birth date</th>
-      <th>Email</th>
-      <th>Fone</th>
-      <th>Cell phone</th>
-      <th>Street</th>
-      <th>Neighborhood</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip code</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <caption><h2>Users</h2></caption>
+    <thead>
       <tr>
-        <td><%= user.name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.birth_date %></td>
-        <td><%= user.email %></td>
-        <td><%= user.fone %></td>
-        <td><%= user.cell_phone %></td>
-        <td><%= user.street %></td>
-        <td><%= user.neighborhood %></td>
-        <td><%= user.city %></td>
-        <td><%= user.state %></td>
-        <td><%= user.zip_code %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Last name</th>
+        <th>Birth date</th>
+        <th>Email</th>
+        <th>Fone</th>
+        <th>Cell phone</th>
+        <th>Street</th>
+        <th>Neighborhood</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip code</th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= user.birth_date %></td>
+          <td><%= user.email %></td>
+          <td><%= user.fone %></td>
+          <td><%= user.cell_phone %></td>
+          <td><%= user.street %></td>
+          <td><%= user.neighborhood %></td>
+          <td><%= user.city %></td>
+          <td><%= user.state %></td>
+          <td><%= user.zip_code %></td>
+          <td>
+          <div class="btn-group btn-group-xs">
+            <%= link_to 'Show', user,class: "btn btn-success" %>
+            <%= link_to 'Edit', edit_user_path(user), class: "btn btn-primary" %>
+            <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, class: "btn btn-primary" %>

@@ -1,24 +1,27 @@
-<div class="mdl-grid">
-	<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-offset mdl-cell--4-col mdl-cell--2-offset-tablet">
-		<div class="mdl-card__title title">
-			<h2 class="mdl-card__title-text">Log in</h2>
+<div class="row">
+	<div class="panel panel-default col-xs-offset-1 col-xs-10  col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+		<div class="panel-heading login">
+			<h1 class="panel-title">Login</h1>
 		</div>
-		<div class="mdl-card__supporting-text">
-			<%= form_for(resource, as: :user, url: session_path(:user)) do |f| %>
-				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label tamanho">
-				<%= f.label :email, class: "mdl-textfield__label" %>
-				<%= f.email_field :email, class: "mdl-textfield__input" %>
-				</div>
-				<br>
-				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label tamanho">
-					<%= f.label :password, class: "mdl-textfield__label" %>
-					<%= f.password_field :password, autocomplete: "off", class: "mdl-textfield__input" %>
-				</div>
+		<div class="panel-body">
+				<%= form_for(resource, as: :user, url: session_path(:user)) do |f| %>
+					<div class="input-group">
+						<span class="input-group-addon" id="email"><i class="glyphicon glyphicon-user"></i></span>
+						<%= f.email_field :email, class: "form-control", placeholder: "Email" %>
+					</div>
+					<br>
+					<div class="input-group">
+						<span class="input-group-addon" id="password"><i class="glyphicon glyphicon-lock"></i></span>
+						<%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %>
+					</div>
+					<br>
 
-				<div class="mdl-card__actions">
-					<%= f.submit "Log in", class: "mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" %>
-				</div>
-			<% end %>
-		</div>
+					<div class="form-group">
+						<div class="col-xs-offset-4 col-sm-offset-5 col-md-offset-5">
+							<%= f.submit "Sign in", class: "btn btndefault" %>
+						</div>
+					</div>
+				<% end %>
+		</div>	
 	</div>
 </div>
