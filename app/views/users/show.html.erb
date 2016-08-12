@@ -1,60 +1,41 @@
 <p id="notice"><%= notice %></p>
-<%= image_tag @user.photo.url(:medium) %>
-<hr>
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+<div class="row">
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-6">
+            <%= image_tag @user.photo.url(:thumb) %>
+          </div>
+          <div class="col-md-6">
+            <h3 class="text-capitalize"><%= @user.name %></h3>
+            <p class="text-capitalize"><%= @user.last_name %></p>
+          </div>
+        </div>
+        <br>
+        <p><strong>Birth Date:</strong> <%= @user.birth_date %></p>
 
-<p>
-  <strong>Birth date:</strong>
-  <%= @user.birth_date %>
-</p>
+        <p ><strong>Email: </strong><%= @user.email %></p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+        <p><strong>Fone: </strong><%= @user.fone %></p>
 
-<p>
-  <strong>Fone:</strong>
-  <%= @user.fone %>
-</p>
+        <p><strong>Cell Phone: </strong><%= @user.cell_phone %></p>
 
-<p>
-  <strong>Cell phone:</strong>
-  <%= @user.cell_phone %>
-</p>
+        <p class="text-capitalize"><strong>Street: </strong><%= @user.street %></p>
 
-<p>
-  <strong>Street:</strong>
-  <%= @user.street %>
-</p>
+        <p class="text-capitalize"><strong>Neighborhood: </strong><%= @user.neighborhood %></p>
 
-<p>
-  <strong>Neighborhood:</strong>
-  <%= @user.neighborhood %>
-</p>
+        <p class="text-capitalize"><strong>City: </strong><%= @user.city %></p>
 
-<p>
-  <strong>City:</strong>
-  <%= @user.city %>
-</p>
+        <p class="text-capitalize"><strong>State: </strong><%= @user.state %></p>
 
-<p>
-  <strong>State:</strong>
-  <%= @user.state %>
-</p>
-
-<p>
-  <strong>Zip code:</strong>
-  <%= @user.zip_code %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+        <p><strong>Zip Code: </strong><%= @user.zip_code %></p>
+      </div>
+    </div>
+    <div class="btn-group botao-show">
+      <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-success" %>
+      <%= link_to 'Back', users_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>

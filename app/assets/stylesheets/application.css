@@ -1,9 +1,9 @@
-.navbar-cor{
+.azul{
 	background-color: #1E90FF;
 	
 }
 
-.navbar-cor .brand-cor{
+.navbar .branco{
 	color: #FFFFFF;
 }
 
@@ -11,18 +11,7 @@
 	color: #FFFFFF;
 }
 
-.container {
-    padding: 25px;
-}
+ .botao-login{
+ 	margin-left: 15px;
 
-.panel{
-	padding: 0;
-	
-}
-.form-control {
-    border-radius: 10px;
-}
-
-.botao {
-    text-align: center;
-}
+ }
