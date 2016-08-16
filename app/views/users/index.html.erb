@@ -6,16 +6,16 @@
     <thead>
       <tr>
         <th>Name</th>
-        <th>Last name</th>
+        <th>Last Name</th>
         <th>Birth date</th>
         <th>Email</th>
         <th>Fone</th>
-        <th>Cell phone</th>
+        <th>Cell Phone</th>
         <th>Street</th>
         <th>Neighborhood</th>
         <th>City</th>
         <th>State</th>
-        <th>Zip code</th>
+        <th>Zip Code</th>
         <th></th>
       </tr>
     </thead>
@@ -23,16 +23,16 @@
     <tbody>
       <% @users.each do |user| %>
         <tr>
-          <td><%= user.name %></td>
-          <td><%= user.last_name %></td>
+          <td class="text-capitalize"><%= user.name %></td>
+          <td class="text-capitalize"><%= user.last_name %></td>
           <td><%= user.birth_date %></td>
           <td><%= user.email %></td>
           <td><%= user.fone %></td>
           <td><%= user.cell_phone %></td>
-          <td><%= user.street %></td>
-          <td><%= user.neighborhood %></td>
-          <td><%= user.city %></td>
-          <td><%= user.state %></td>
+          <td class="text-capitalize"><%= user.street %></td>
+          <td class="text-capitalize"><%= user.neighborhood %></td>
+          <td class="text-capitalize"><%= user.city %></td>
+          <td class="text-capitalize"><%= user.state %></td>
           <td><%= user.zip_code %></td>
           <td>
           <div class="btn-group btn-group-xs">

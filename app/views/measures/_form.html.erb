@@ -10,40 +10,74 @@
       </ul>
     </div>
   <% end %>
+  <div class="row">
+    <div class="form-group">
+      <div class="form-inline col-md-3">
+        <%= f.label :date %><br>
+        <%= f.date_select :date, {start_year: Date.today.year - 5, end_year: Date.today.year, order: [:day, :month, :year]}, {class: "form-control"} %>
+      </div>
+      <div class="col-md-2">
+        <%= f.label :arm %><br>
+        <div class="input-group">
+          <%= f.text_field :arm, class: "form-control", placeholder: "ex: 60,9" %>
+          <div class="input-group-addon">cm</div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <%= f.label :waist %><br>
+        <div class="input-group">
+          <%= f.text_field :waist, class: "form-control", placeholder: "ex: 61,5" %>
+          <div class="input-group-addon">cm</div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <%= f.label :hip %><br>
+        <div class="input-group">
+          <%= f.text_field :hip, class: "form-control", placeholder: "ex: 62,4" %>
+          <div class="input-group-addon">cm</div>
+        </div>
+      </div>
+      <div class="col-md-2">
+      <%= f.label :calf %><br>
+      <div class="input-group">
+        <%= f.text_field :calf, class: "form-control", placeholder: "ex: 78,2" %>
+        <div class="input-group-addon">cm</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="form-group">
+      <div class="col-md-3">
+        <%= f.label :user_id %><br>
+        <%= f.collection_select(:user_id, @users, :id, :name, {:prompt => true}, {class: "form-control"}) %>
+      </div>
+      <div class="col-md-2">
+        <%= f.label :calf %><br>
+        <div class="input-group">
+          <%= f.text_field :calf, class: "form-control", placeholder: "ex: 78,2" %>
+          <div class="input-group-addon">cm</div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <%= f.label :thigh %><br>
+        <div class="input-group">
+          <%= f.text_field :thigh, class: "form-control", placeholder: "ex: 78,2" %>
+          <div class="input-group-addon">cm</div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <%= f.label :weigth %><br>
+        <div class="input-group">
+          <%= f.text_field :weigth, class: "form-control", placeholder: "ex: 78,2" %>
+          <div class="input-group-addon">cm</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date, start_year: Date.today.year - 5, end_year: Date.today.year, order: [:day, :month, :year] %>
-  </div>
-  <div class="field">
-    <%= f.label :arm %><br>
-    <%= f.text_field :arm %>
-  </div>
-  <div class="field">
-    <%= f.label :waist %><br>
-    <%= f.text_field :waist %>
-  </div>
-  <div class="field">
-    <%= f.label :hip %><br>
-    <%= f.text_field :hip %>
-  </div>
-  <div class="field">
-    <%= f.label :calf %><br>
-    <%= f.text_field :calf %>
-  </div>
-  <div class="field">
-    <%= f.label :thigh %><br>
-    <%= f.text_field :thigh %>
-  </div>
-  <div class="field">
-    <%= f.label :weigth %><br>
-    <%= f.text_field :weigth %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.collection_select(:user_id, @users, :id, :name, :prompt => true) %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <br>
+   <%= f.submit "Create Measures", class: "btn btn-primary" %>
+ 
 <% end %>

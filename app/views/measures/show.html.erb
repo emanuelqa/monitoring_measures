@@ -1,44 +1,63 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @measure.date %>
-</p>
+<div class="row">
+  <div class="col-md-offset-4 col-md-4 text-center">
+    <h1 class="text-capitalize"> <%= @measure.user.name %> <small><%= @measure.user.last_name%></small> </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-4 col-md-4 text-center">
+    <h3> <%= @measure.date %> </h3>
+  </div>
+</div>
 
-<p>
-  <strong>Arm:</strong>
-  <%= @measure.arm %>
-</p>
+<div class="row">
+  <div class="col-md-offset-4 col-md-4">
+    <div class="row">
+      <div class="col-md-4">
+        <strong>Arm:</strong>
+        <%= @measure.arm %>
+      </div>
+      <div class="col-md-4">
+        <strong>Waist:</strong>
+        <%= @measure.waist %>
+      </div>
+      <div class="col-md-4">
+        <strong>Hip:</strong>
+        <%= @measure.hip %>
+      </div>
+  </div>
+</div>
 
-<p>
-  <strong>Waist:</strong>
-  <%= @measure.waist %>
-</p>
+<div class="row">
+  <div class="col-md-offset-4 col-md-4">
+    <div class="row">
+      <div class="col-md-4">
+        <strong>Calf:</strong>
+        <%= @measure.calf %>
+      </div>
+      <div class="col-md-4">
+        <strong>Thigh:</strong>
+        <%= @measure.thigh %>
+      </div>
+      <div class="col-md-4">
+        <strong>Weigth:</strong>
+        <%= @measure.weigth %>
+      </div>
+    </div> 
+  </div>   
+</div>
 
-<p>
-  <strong>Hip:</strong>
-  <%= @measure.hip %>
-</p>
-
-<p>
-  <strong>Calf:</strong>
-  <%= @measure.calf %>
-</p>
-
-<p>
-  <strong>Thigh:</strong>
-  <%= @measure.thigh %>
-</p>
-
-<p>
-  <strong>Weigth:</strong>
-  <%= @measure.weigth %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @measure.user.name %>
-</p>
-
-<%= link_to 'Edit', edit_measure_path(@measure) %> |
-<%= link_to 'Back', measures_path %>
+<br>
+<div class="row">
+  <div class="col-md-offset-5 col-md-2">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="btn-group">
+          <%= link_to 'Edit', edit_measure_path(@measure),class: "btn btn-success" %>
+          <%= link_to 'Back', measures_path,class: "btn btn-danger"  %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
